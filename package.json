@@ -1,0 +1,19 @@
+{
+  "name": "view-generator",
+  "version": "1.0.0",
+  "description": "View Generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "ttsc && node src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Nwankwo",
+  "license": "ISC",
+  "dependencies": {
+    "ts-transformer-keys": "^0.4.1"
+  },
+  "devDependencies": {
+    "ttypescript": "^1.5.10",
+    "typescript": "^3.8.3"
+  }
+}
