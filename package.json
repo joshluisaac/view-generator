@@ -10,6 +10,8 @@
   "author": "Joshua Nwankwo",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^13.9.0",
+    "require": "^2.4.20",
     "ts-transformer-keys": "^0.4.1"
   },
   "devDependencies": {
