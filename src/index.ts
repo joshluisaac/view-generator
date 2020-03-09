@@ -1,43 +1,70 @@
-import { keys } from 'ts-transformer-keys';
-
+import { keys } from "ts-transformer-keys";
 
 interface LabeledValue {
   label: string;
   name: string;
 }
 
-function printLabel(labeledObj: LabeledValue) {
-  console.log(labeledObj.label);
-}
-
-const printLabel2 = (labeledObj: LabeledValue) => console.log(labeledObj.label);
+const printLabel = (labeledObj: LabeledValue) => console.log(labeledObj.label);
 
 let myObj = { size: 10, name: "Joshua", label: "Size 10 Object" };
 printLabel(myObj);
-printLabel2(myObj);
 
 interface ProductFee {
-    productId: string;
-    feeId: string;
-    name?: string;
-    feeType?: string;
-    amount?: string;
-    balanceRate?: string;
-    transactionRate?: string;
-    accruedRate?: string;
-    accrualFrequency?: string;
-    currency?: string;
-    additionalValue?: string;
-    additionalInfo?: string;
-    additionalInfoUri?: string;
+  productId: string;
+  feeId: string;
+  name?: string;
+  feeType?: string;
+  amount?: string;
+  balanceRate?: string;
+  transactionRate?: string;
+  accruedRate?: string;
+  accrualFrequency?: string;
+  currency?: string;
+  additionalValue?: string;
+  additionalInfo?: string;
+  additionalInfoUri?: string;
 }
 
 const keysOfProps = keys<ProductFee>();
+console.log(keysOfProps);
 
-console.log(keysOfProps); // ['id', 'name', 'age']
+const generateHead = (modelProps: string[]) => {
+  let html: string[] = [];
+  modelProps.forEach(modelProp => {
+    html.push(`<th>${modelProp}</th>`);
+  });
+  const template = `
+  <thead>
+    <tr>
+      <th>No.</th>
+      ${html.join("")}
+    </tr>
+  </thead>`;
+  return template;
+};
+
+const generateBody = (modelProps: string[], modelName: string) => {
+  let html: string[] = [];
+  modelProps.forEach(modelProp => {
+    html.push(`<td>{${modelName}.${modelProp}}</td>`);
+  });
+  const template = `
+  <tbody>
+  {${modelName}s.map((${modelName}, index) => {
+    return (
+      <tr key={index}>
+        <td>{index + 1}</td>
+        ${html.join("")}
+      </tr>
+    );
+  })}
+</tbody>`;
+  return template;
+};
 
 
-const readData = (model:ProductFee) => {
-    console.log(Object.keys(model));  
-}
+console.log(generateHead(keysOfProps));
+console.log(generateBody(keysOfProps, "fee"));
+
 
