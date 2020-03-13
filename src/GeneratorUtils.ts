@@ -3,14 +3,13 @@ const generateHead = (modelProps: string[]) => {
   modelProps.forEach(modelProp => {
     html.push(`<th>${modelProp}</th>`);
   });
-  const template = `
+  return `
     <thead>
       <tr>
         <th>No.</th>
         ${html.join("")}
       </tr>
     </thead>`;
-  return template;
 };
 
 const generateBody = (modelProps: string[], modelName: string) => {
@@ -18,7 +17,7 @@ const generateBody = (modelProps: string[], modelName: string) => {
   modelProps.forEach(modelProp => {
     html.push(`<td>{${modelName}.${modelProp}}</td>`);
   });
-  const template = `
+  return `
     <tbody>
     {${modelName}s.map((${modelName}, index) => {
       return (
@@ -29,7 +28,6 @@ const generateBody = (modelProps: string[], modelName: string) => {
       );
     })}
   </tbody>`;
-  return template;
 };
 
 export const generate = (modelProps: string[], modelName: string) => {

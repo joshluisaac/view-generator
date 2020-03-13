@@ -13,6 +13,7 @@ import { ProductFeature } from "./models/productFeature";
 import { ProductDepositRate } from "./models/productDepositRate";
 import { ProductRateTier } from "./models/productRateTier";
 import { ProductLendingRate } from "./models/productLendingRate";
+import {ProductAdditionalInformation} from "./models/productAdditionalInformation";
 
 
 
@@ -36,14 +37,17 @@ printLabel(myObj);
 //
 //console.log(generate(keys<ProductEligbility>(), "eligibility"));
 // console.log(generate(keys<ProductFeature>(), "feature"));
-// console.log(generate(keys<ProductFee>(), "fee"));
-// console.log(generate(keys<ProductFeeDiscount>(), "feediscount"));
-// console.log(generate(keys<ProductFeeDiscountEligibility>(), "feediscounteligibility"));
+//console.log(generate(keys<ProductFee>(), "fee"));
+//console.log(generate(keys<ProductFeeDiscount>(), "feediscount"));
+//console.log(generate(keys<ProductFeeDiscountEligibility>(), "feediscounteligibility"));
 //
-// console.log(generate(keys<ProductDepositRate>(), "depositrate"));
-// console.log(generate(keys<ProductRateTier>(), "depositratetier"));
+//console.log(generate(keys<ProductDepositRate>(), "depositrate"));
+//console.log(generate(keys<ProductRateTier>(), "depositratetier"));
 //
-// console.log(generate(keys<ProductLendingRate>(), "lendingrate"));
-// console.log(generate(keys<ProductRateTier>(), "lendingratetier"));
+//console.log(generate(keys<ProductLendingRate>(), "lendingrate"));
+//console.log(generate(keys<ProductRateTier>(), "lendingratetier"));
+
+
+//console.log(generate(keys<ProductAdditionalInformation>(), "additionalinfo"));
 
 

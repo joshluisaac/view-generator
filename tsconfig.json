@@ -4,6 +4,8 @@
       "noEmitOnError": true,
       "suppressImplicitAnyIndexErrors": true,
       "target": "ES5",
+      "outDir": "dist",
+      "sourceMap": true,
       "plugins": [
         { "transform": "ts-transformer-keys/transformer" }
       ]

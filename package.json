@@ -2,9 +2,12 @@
   "name": "view-generator",
   "version": "1.0.0",
   "description": "View Generator",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "start": "ttsc && node src/index",
+    "build": "ttsc",
+    "start": "node ./dist/index.js",
+
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Nwankwo",
