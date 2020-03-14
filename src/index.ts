@@ -47,7 +47,6 @@ printLabel(myObj);
 //console.log(generate(keys<ProductLendingRate>(), "lendingrate"));
 //console.log(generate(keys<ProductRateTier>(), "lendingratetier"));
 
-
-//console.log(generate(keys<ProductAdditionalInformation>(), "additionalinfo"));
+console.log(generate(keys<ProductAdditionalInformation>(), "additionalinfo"));
 
 

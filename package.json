@@ -6,15 +6,12 @@
   "scripts": {
     "build": "ttsc",
     "start": "node ./dist/index.js",
-
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Nwankwo",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^13.9.0",
-    "require": "^2.4.20",
     "ts-transformer-keys": "^0.4.1",
     "xlsx": "^0.15.1"
   },
